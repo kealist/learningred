@@ -1,0 +1,34 @@
+<h1><% unless item/live? [ %><small>[edit]</small> <% ] %><%== title %></h1>
+<p class="lead byline"><%! time (item/get 'published) "%Y.%m.%d" %> by <b><%== item/author/get 'name %></b></p>
+
+
+
+
+<div class="row">
+
+<div class="col-md-8 main">
+<%= item/document/render %>
+</div>
+
+<div class="col-md-4 side"><% some item/document/tags [ %>
+<ul class="list-unstyled"><% foreach tag item/document/tags [ %>
+	<li class="label label-default"><%! a news/tag/(wordify tag) %><%== tag %></a></li><% ] %>
+</ul><% ] %><%=
+
+	if user/blogger? [
+		render/partial/use %templates/actions collect [
+			switch item/status [
+				"Live" [keep reduce ['button 'put join item/link %,status 'status "ready" "Unpublish"]]
+				"Ready" [
+					keep reduce ['link join item/link %,edit "Edit"]
+					keep reduce ['button 'put join item/link %,status 'status "live" "Republish"]
+				]
+			]
+		]
+	]
+
+%>
+</div>
+
+<script type="text/javascript" src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<script type="text/javascript" src="/assets/lang-rebol.js"></script>

@@ -1,0 +1,19 @@
+<h1>News</h1>
+<p class="lead muted"><%= subhead %></p>
+
+<div class="row">
+
+<div class="col-md-8 main">
+<%= render-each [month items] collection %month %>
+</div>
+
+<div class="col-md-3 col-md-offset-1 side"><% if user/moderator? [ %>
+<p><a class="btn btn-default" href="/news,new"><em>Create News Item</em></a></p><% ] %>
+<%= render/partial %history %>
+<%= render/partial %tag-cloud %>
+</div>
+
+</div><!-- /row -->
+
+<script type="text/javascript" src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<script type="text/javascript" src="/assets/lang-rebol.js"></script>

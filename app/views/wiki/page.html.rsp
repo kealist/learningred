@@ -1,0 +1,23 @@
+<div class="row">
+
+<div class="col-md-8 main">
+<!-- \Page -->
+<%= page/document/render %>
+<!-- /page -->
+</div>
+
+<div class="col-md-3 col-md-offset-1 side">
+<!-- Tags, etc. -->
+<%
+	if user/editor? [
+
+%><%= render/partial/use %templates/actions reduce ['link link-to wiki/(page/id)/%,edit "Edit Page"] %><%
+
+	]
+
+%></div>
+
+</div>
+
+<script type="text/javascript" src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<script type="text/javascript" src="/assets/lang-rebol.js"></script>
