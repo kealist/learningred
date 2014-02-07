@@ -6,12 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="/assets/red.css" media="screen" title="Learning Red">
-<link rel="alternate" href="/feeds/news.feed" type="application/atom+xml" title="Red Latest">
+<link rel="alternate" href="/feeds/news.feed" type="application/atom+xml" title="Learning Red Latest">
 <script src="//code.jquery.com/jquery.js"></script>
-<script src="/assets/switcher.js"></script>
 </head>
 
-<body class="<%= form background %>">
+<body class="light">
 
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	<div class="container">
@@ -25,10 +24,10 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav"><% unless user/new? [ %>
 					<li><a href="/dashboard">Dashboard</a></li><% ] %>
-					<li><a href="/wiki/GettingStarted">Getting Started</a></li>
-					<li><a href="/news">Learn Red</a></li>
+					<li><a href="/wiki/Getting_Started">Getting Started Videos</a></li>
+					<li><a href="/news/tag/instructional">Learn Red</a></li>
 					<li><a href="/wiki/Challenges">Red Challenges</a></li>
-					<li><a href="/wiki/RSExtensions">Red/System Extensions</a></li>
+					<li><a href="/wiki/Red_System_Extensions">Red/System Extensions</a></li>
 				</ul>
 			</div>
 		</div>
@@ -37,7 +36,7 @@
 
 <div class="header">
 	<div class="container">
-		<h1 class="logo"><img src="/assets/red.png" width="230" height="105" alt="Red" title="Red"></h1>
+		<h1 class="logo"><img src="/assets/learningred.png" width="230" height="105" alt="LearningRed" title="LearningRed"></h1>
 	</div>
 </div>
 
