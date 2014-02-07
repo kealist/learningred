@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="/assets/red.css" media="screen" title="Learning Red">
+<link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
 <link rel="alternate" href="/feeds/news.feed" type="application/atom+xml" title="Learning Red Latest">
 <script src="//code.jquery.com/jquery.js"></script>
 </head>
@@ -36,7 +37,8 @@
 
 <div class="header">
 	<div class="container">
-		<h1 class="logo"><img src="/assets/learningred.png" width="230" height="105" alt="LearningRed" title="LearningRed"></h1>
+		<h1 class="logo">Learning</hi><h1 class="logored">Red</h1>
+
 	</div>
 </div>
 

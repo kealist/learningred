@@ -5,13 +5,13 @@ REBOL [
 	Type: 'controller
 	Template: %templates/red.rsp
 	Feed: [
-		Title: "Red"
-		Subtitle: "The Full-Stack Programming Language"
-		ID: Base: http://www.red-lang.org/
+		Title: "Learning Red"
+		Subtitle: "Making sense of Red and Red/System"
+		ID: Base: http://www.learningred.com/
 		Link: %/news/
 		Target: %/feeds/news.feed
-		Logo: Icon: http://www.red-lang.org/assets/red-logo.png
-		Tag: tag:red-lang.org
+		Logo: Icon: http://www.learningred.com/assets/learningred-logo.png
+		Tag: tag:learningred.com
 	]
 ]
 
@@ -25,7 +25,7 @@ route () to %news [
 	]
 
 	get [
-		title: "Red: News"
+		title: "Learning Red: Articles"
 		where %.html [
 			subhead: "Latest"
 			history: news/locals/history
@@ -44,12 +44,12 @@ route () to %news [
 	]
 
 	get %,new [
-		title: "Create News Post"
+		title: "Create Article"
 		draft: select news 'new
 	]
 
 	post %,new [
-		title: "Create News Post"
+		title: "Create Article"
 		draft: select news 'new
 
 		if verify [
@@ -83,7 +83,7 @@ route (year: integer! is between 2000x20000 month: opt integer! is between 1x12)
 		date-next/month: date-next/month + 1
 		if date-next > now/date [date-next: none]
 
-		title: join "Red: News " subhead: form-date date "for %B %Y"
+		title: join "Learning Red: Article " subhead: form-date date "for %B %Y"
 		history: news/locals/history
 		tag-cloud: news/locals/tag-cloud
 
@@ -98,7 +98,7 @@ route ("tag" tag: string! [wordify]) to %news [
 		history: news/locals/history
 		tag-cloud: news/locals/tag-cloud
 
-		title: join "Red: News for " unwordify tag
+		title: join "Learning Red: Articles for " unwordify tag
 
 		collection: categorize select news [by-tag tag] func [item [object!]][
 			all [
